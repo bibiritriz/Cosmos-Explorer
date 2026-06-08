@@ -1,14 +1,15 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { FavoritesProvider } from './src/context/FavoritesContext';
+import AppNavigator from './src/navigation/AppNavigator';
 
 export default function App() {
   return (
     <FavoritesProvider>
       <NavigationContainer>
-        {null}
+        <AppNavigator />
       </NavigationContainer>
-      <StatusBar style="auto" />
+      <StatusBar style="dark" />
     </FavoritesProvider>
   );
 }
